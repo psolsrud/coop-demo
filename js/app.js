@@ -86,8 +86,6 @@ function polygonClick(e) {
 // Null variable that will hold layer
 var myLayer = L.geoJson(null, { onEachFeature: forEachFeature, style: myStyle }).addTo(map);
 
-console.log("ready!");
-
 var polygons = L.featureGroup().on('click', polygonClick).addTo(map);
 
 var territories = "data/map.geojson";
