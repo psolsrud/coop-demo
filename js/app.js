@@ -61,6 +61,8 @@ function forEachFeature(feature, layer) {
     });
 }
 
+
+// executed when feature is clicked
 function polygonClick(e) {
 
     $('#my-modal').modal({
@@ -86,10 +88,11 @@ function polygonClick(e) {
 // Null variable that will hold layer
 var myLayer = L.geoJson(null, { onEachFeature: forEachFeature, style: myStyle }).addTo(map);
 
+// empty featureGroup() used to determine extents of selectedLayer
 var polygons = L.featureGroup().on('click', polygonClick).addTo(map);
 
+// AJAX used here to load local geojson
 var territories = "data/map.geojson";
-
 $.getJSON(territories, function (data) {
     L.geoJson(data, {
         onEachFeature: forEachFeature,
