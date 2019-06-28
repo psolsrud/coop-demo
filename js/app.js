@@ -8,7 +8,7 @@ map.setView([45.74172, -95.943603], 8);
 
 L.control.layers({
     'Mapbox Streets': L.mapbox.styleLayer('mapbox://styles/mapbox/streets-v11').addTo(map),
-    'Mapbox Light':  L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v9')
+    'Mapbox Satellite':  L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v9')
 }).addTo(map);
 
 // Set style function that sets fill color property
