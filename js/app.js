@@ -21,7 +21,7 @@ function myStyle(feature) {
         fillColor: 'blue',
         weight: 2,
         opacity: 1,
-        color: 'white',  //Outline color
+        color: 'blue',  //Outline color
         fillOpacity: 0
     };
 }
@@ -30,7 +30,7 @@ function mySelectedStyle(feature) {
     return {
         fillColor: "#00FFFB",
         color: '#0000FF',
-        fillOpacity: 1
+        fillOpacity: 0.5
     };
 }
 
