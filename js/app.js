@@ -22,7 +22,7 @@ function myStyle(feature) {
         weight: 2,
         opacity: 1,
         color: 'white',  //Outline color
-        fillOpacity: 0.7
+        fillOpacity: 0
     };
 }
 
