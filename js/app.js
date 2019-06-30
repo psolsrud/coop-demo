@@ -19,7 +19,7 @@ function myStyle(feature) {
         // fillOpacity: 1,
         // color: '#B04173',
         fillColor: 'blue',
-        weight: 2,
+        weight: 3,
         opacity: 1,
         color: 'blue',  //Outline color
         fillOpacity: 0
