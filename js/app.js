@@ -15,9 +15,14 @@ L.control.layers({
 // define the styles for the my layer (unselected and selected)
 function myStyle(feature) {
     return {
-        fillColor: "#FF00FF",
-        fillOpacity: 1,
-        color: '#B04173',
+        // fillColor: "#FF00FF",
+        // fillOpacity: 1,
+        // color: '#B04173',
+        fillColor: 'blue',
+        weight: 2,
+        opacity: 1,
+        color: 'white',  //Outline color
+        fillOpacity: 0.7
     };
 }
 
