@@ -102,7 +102,7 @@ var myLayer = L.geoJson(null, { onEachFeature: forEachFeature, style: myStyle })
 var polygons = L.featureGroup().on('click', polygonClick).addTo(map);
 
 // AJAX used here to load local geojson
-var territories = "data/map.geojson";
+var territories = "data/data.geojson";
 $.getJSON(territories, function (data) {
     L.geoJson(data, {
         onEachFeature: forEachFeature,
