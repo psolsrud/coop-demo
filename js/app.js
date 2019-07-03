@@ -21,7 +21,7 @@ function myStyle(feature) {
         fillColor: 'blue',
         weight: 3,
         opacity: 1,
-        color: 'red',  //Outline color
+        color: 'blue',  //Outline color
         fillOpacity: 0
     };
 }
