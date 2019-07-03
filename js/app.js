@@ -40,6 +40,9 @@ map.addEventListener('click', function (e) {
         resetStyles();
         selection = null;
     }
+    $('#no-service-modal').modal({
+        show: 'true'
+    });
 });
 
 // function to set the old selected feature back to its original symbol. Used when the map or a feature is clicked.
@@ -70,7 +73,7 @@ function forEachFeature(feature, layer) {
 // executed when feature is clicked
 function polygonClick(e) {
 
-    $('#my-modal').modal({
+    $('#service-modal').modal({
         show: 'true'
     });
 
@@ -82,12 +85,14 @@ function polygonClick(e) {
     $(".digital_tv").empty();
     $(".phone").empty();
     $(".home_automation").empty();
+    $(".btn.btn-success.pull-left").remove();
 
     $(".title").prepend('Available Services');
     $(".speed").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_f58d71badf48432bbd277b61d9314ba2~mv2.png/v1/fill/w_188,h_188,al_c/aee650_f58d71badf48432bbd277b61d9314ba2~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.speed + ' Mb</div>');
     $(".digital_tv").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_20ebd546c5524639a900e589108450e5~mv2.png/v1/fill/w_188,h_188,al_c/aee650_20ebd546c5524639a900e589108450e5~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.digital_tv + '</div>');
     $(".phone").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_0d4fdf26e061469dba4e8f2a83d81147~mv2.png/v1/fill/w_188,h_188,al_c/aee650_0d4fdf26e061469dba4e8f2a83d81147~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.phone + '</div>');
     $(".home_automation").prepend('<div class="product-content"><img src="https://static.wixstatic.com/media/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png/v1/fill/w_188,h_188,al_c/aee650_7d28d8b31fb849b1aaf528ca5296ea06~mv2.png" style="vertical-align: middle;width:60px;height:60px;">' + '&nbsp;&nbsp;' + feature.properties.home_autom + '</div>');
+    $("#service-modal .modal-footer").prepend('<a class="btn btn-success pull-left" href="' + feature.properties.url + '" target="_blank" role="button">News!</a>');
 }
 
 // Null variable that will hold layer
