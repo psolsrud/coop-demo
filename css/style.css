@@ -8,7 +8,7 @@ body {
     background-color: #15253b;
     
     /*zoom used soley for heroku deployment*/
-    /* zoom: 0.75; */
+    zoom: 0.75;
 }
 
 body {
